@@ -13,9 +13,7 @@ services:
       - qc-volume:/QualitasCorpus
     environment:
       DBHOST: dbstorage
-      SOURCEDIRtest: "/usr/src/app/test/data"
-      SOURCEDIReclipse: "/QualitasCorpus/QualitasCorpus-20130901r/Systems/eclipse_SDK"
-      SOURCEDIR: "/QualitasCorpus/"
+      SOURCEDIR: "/QualitasCorpus/QualitasCorpus-20130901r/Systems/eclipse_SDK"
       CHUNKSIZE: 20
     depends_on:
       - dbstorage
@@ -41,8 +39,6 @@ services:
     image: bigdataanalytics-monitortool  # Nom corrigé
     environment:
       DBHOST: dbstorage
-      #DB_PORT:27017
-      DB_NAME: clone-detector
     depends_on:
       - dbstorage
 
